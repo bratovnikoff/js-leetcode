@@ -3,21 +3,21 @@
  * @return {Function}
  */
 function memoize(fn) {
-    const memoized = new Map();
+  const memoized = new Map();
 
-    return function (...args) {
-        let currentMap = memoized;
+  return function (...args) {
+    let currentMap = memoized;
 
-        for (let i = 0; i < args.length; i++) {
-            if (!currentMap.has(args[i])) currentMap.set(args[i], new Map());
+    for (let i = 0; i < args.length; i++) {
+      if (!currentMap.has(args[i])) currentMap.set(args[i], new Map());
 
-            currentMap = currentMap.get(args[i]);
-        }
+      currentMap = currentMap.get(args[i]);
+    }
 
-        if (!currentMap.has("fn")) currentMap.set("fn", fn(...args));
+    if (!currentMap.has("fn")) currentMap.set("fn", fn(...args));
 
-        return currentMap.get("fn");
-    };
+    return currentMap.get("fn");
+  };
 }
 
 /**

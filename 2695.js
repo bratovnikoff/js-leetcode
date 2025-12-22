@@ -3,27 +3,27 @@
  * @return {void}
  */
 var ArrayWrapper = function (nums) {
-    this.nums = nums;
+  this.nums = nums;
 };
 
 /**
  * @return {number}
  */
 ArrayWrapper.prototype.valueOf = function () {
-    let sum = 0;
+  let sum = 0;
 
-    for (const num of this.nums) {
-        sum += num;
-    }
+  for (const num of this.nums) {
+    sum += num;
+  }
 
-    return sum;
+  return sum;
 };
 
 /**
  * @return {string}
  */
 ArrayWrapper.prototype.toString = function () {
-    return `[${this.nums.join(",")}]`;
+  return `[${this.nums.join(",")}]`;
 };
 
 /**

@@ -3,18 +3,18 @@
  * @return {Object}
  */
 Array.prototype.groupBy = function (fn) {
-    const obj = {};
+  const obj = {};
 
-    for (const element of this) {
-        const res = fn(element);
-        if (!Object.hasOwn(obj, res)) {
-            obj[res] = [];
-        }
-
-        obj[res].push(element);
+  for (const element of this) {
+    const res = fn(element);
+    if (!Object.hasOwn(obj, res)) {
+      obj[res] = [];
     }
 
-    return obj;
+    obj[res].push(element);
+  }
+
+  return obj;
 };
 
 /**

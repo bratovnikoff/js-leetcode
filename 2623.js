@@ -3,17 +3,17 @@
  * @return {Function}
  */
 function memoize(fn) {
-    const memoizedCalls = {};
+  const memoizedCalls = {};
 
-    return function (...args) {
-        const id = args.toString();
+  return function (...args) {
+    const id = args.toString();
 
-        if (memoizedCalls[id] === undefined) {
-            memoizedCalls[id] = fn(...args);
-        }
+    if (memoizedCalls[id] === undefined) {
+      memoizedCalls[id] = fn(...args);
+    }
 
-        return memoizedCalls[id];
-    };
+    return memoizedCalls[id];
+  };
 }
 
 /**

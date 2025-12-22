@@ -4,15 +4,15 @@
  * @return {number[]}
  */
 var filter = function (arr, fn) {
-    const filteredArr = [];
+  const filteredArr = [];
 
-    for (let i = 0; i < arr.length; i++) {
-        if (!fn(arr[i], i)) {
-            continue;
-        }
-
-        filteredArr.push(arr[i]);
+  for (let i = 0; i < arr.length; i++) {
+    if (!fn(arr[i], i)) {
+      continue;
     }
 
-    return filteredArr;
+    filteredArr.push(arr[i]);
+  }
+
+  return filteredArr;
 };

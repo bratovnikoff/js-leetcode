@@ -3,24 +3,24 @@
  * @return {Object}
  */
 var expect = function (val) {
-    const expectedValue = val;
+  const expectedValue = val;
 
-    return {
-        toBe: (val) => {
-            if (val !== expectedValue) {
-                throw new Error("Not Equal");
-            }
+  return {
+    toBe: (val) => {
+      if (val !== expectedValue) {
+        throw new Error("Not Equal");
+      }
 
-            return true;
-        },
-        notToBe: (val) => {
-            if (val === expectedValue) {
-                throw new Error("Equal");
-            }
+      return true;
+    },
+    notToBe: (val) => {
+      if (val === expectedValue) {
+        throw new Error("Equal");
+      }
 
-            return true;
-        },
-    };
+      return true;
+    },
+  };
 };
 
 /**

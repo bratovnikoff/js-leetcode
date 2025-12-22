@@ -4,8 +4,8 @@
  * @return {null|boolean|number|string|Array|Object}
  */
 Function.prototype.callPolyfill = function (context, ...args) {
-    const boundedFn = this.bind(context, ...args);
-    return boundedFn();
+  const boundedFn = this.bind(context, ...args);
+  return boundedFn();
 };
 
 /**

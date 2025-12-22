@@ -5,13 +5,13 @@
  * @return {Function}
  */
 var cancellable = function (fn, args, t) {
-    const timeoutId = setTimeout(fn, t, ...args);
+  const timeoutId = setTimeout(fn, t, ...args);
 
-    const cancelFn = function () {
-        clearTimeout(timeoutId);
-    };
+  const cancelFn = function () {
+    clearTimeout(timeoutId);
+  };
 
-    return cancelFn;
+  return cancelFn;
 };
 
 /**
